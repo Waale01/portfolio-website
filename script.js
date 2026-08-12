@@ -12,7 +12,7 @@ form.addEventListener('submit', async function (event) {
   statusMessage.style.color = '#555';
 
   try {
-    const response = await fetch('http://localhost:3000/contact', {
+    const response = await fetch('https://portfolio-website-kjh5.onrender.com/contact', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
