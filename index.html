@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -19,15 +22,22 @@
 </nav>
 
 <header class="hero">
-  <h1>Hello, I'm Adewusi Sodiq Adewale</h1>
+  <p class="hero-eyebrow">Portfolio</p>
+  <h1>Adewusi Sodiq Adewale</h1>
   <p class="tagline">Finance, Banking &amp; Technology Professional</p>
+  <p class="hero-sub">I turn data and business problems into practical, results-driven solutions.</p>
+  <div class="hero-actions">
+    <a href="#contact" class="btn-primary">Get in Touch</a>
+    <a href="#projects" class="btn-secondary">View Work</a>
+  </div>
 </header>
 
-<section id="about">
+<section id="about" class="fade-in">
   <h2>About Me</h2>
   <p>I am a results driven professional with experience across banking, financial analysis, business development, data analysis, and technology. I enjoy solving business problems, working with data, and using technology to create practical solutions.</p>
 </section>
-<section id="skills">
+
+<section id="skills" class="fade-in">
   <h2>Skills</h2>
   <div class="skills-grid">
     <span class="skill">Financial Analysis</span>
@@ -38,7 +48,8 @@
     <span class="skill">Problem Solving</span>
   </div>
 </section>
-<section id="projects">
+
+<section id="projects" class="fade-in">
   <h2>Projects</h2>
   <div class="projects-grid">
     <div class="project-card">
@@ -51,7 +62,8 @@
     </div>
   </div>
 </section>
-<section id="contact">
+
+<section id="contact" class="fade-in">
   <h2>Contact Me</h2>
   <div class="contact-card">
     <form id="contact-form">
@@ -77,9 +89,11 @@
     <p id="form-status"></p>
   </div>
 </section>
+
 <footer>
   <p>&copy; 2026 Adewusi Sodiq Adewale. All rights reserved.</p>
 </footer>
+
 <script src="script.js"></script>
 </body>
 </html>
