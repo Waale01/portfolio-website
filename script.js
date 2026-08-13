@@ -1,3 +1,8 @@
+if ('scrollRestoration' in history) {
+  history.scrollRestoration = 'manual';
+}
+window.scrollTo(0, 0);
+
 const form = document.getElementById('contact-form');
 const statusMessage = document.getElementById('form-status');
 
@@ -36,3 +41,15 @@ form.addEventListener('submit', async function (event) {
     statusMessage.style.color = '#c0392b';
   }
 });
+
+const fadeElements = document.querySelectorAll('.fade-in');
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.15 });
+
+fadeElements.forEach(el => observer.observe(el));
