@@ -71,10 +71,31 @@ nav {
 
 /* Hero */
 .hero {
+  position: relative;
+  overflow: hidden;
   text-align: center;
   padding: 80px 20px 60px;
-  border-bottom: 1px solid #eee;
   margin-bottom: 40px;
+  background: linear-gradient(180deg, #eaf1f8 0%, #ffffff 100%);
+  border-radius: 0 0 24px 24px;
+}
+
+.hero-icon {
+  position: absolute;
+  font-size: 2.5rem;
+  opacity: 0.15;
+  animation: float 6s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.icon-1 { top: 15%; left: 8%; animation-delay: 0s; }
+.icon-2 { top: 20%; right: 10%; animation-delay: 1.5s; }
+.icon-3 { bottom: 20%; left: 12%; animation-delay: 3s; }
+.icon-4 { bottom: 15%; right: 8%; animation-delay: 4.5s; }
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
 }
 
 .hero-eyebrow {
