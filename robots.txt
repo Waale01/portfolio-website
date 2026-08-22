@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://adewusiportfolio.netlify.app/sitemap.xml

@@ -12,6 +12,7 @@ form.addEventListener('submit', async function (event) {
   const name = document.getElementById('name').value;
   const email = document.getElementById('email').value;
   const message = document.getElementById('message').value;
+  const company = document.getElementById('company').value;
 
   statusMessage.textContent = 'Sending...';
   statusMessage.style.color = '#555';
@@ -22,7 +23,7 @@ form.addEventListener('submit', async function (event) {
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify({ name, email, message })
+      body: JSON.stringify({ name, email, message, company })
     });
 
     const data = await response.json();
@@ -53,3 +54,29 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.15 });
 
 fadeElements.forEach(el => observer.observe(el));
+const readMoreButtons = document.querySelectorAll('.read-more-btn');
+
+readMoreButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const card = button.closest('.project-card');
+    card.classList.toggle('expanded');
+    button.textContent = card.classList.contains('expanded') ? 'Show less' : 'Read more';
+  });
+});
+
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('nav-links');
+
+hamburger.addEventListener('click', () => {
+  const isOpen = navLinks.classList.toggle('open');
+  hamburger.classList.toggle('open', isOpen);
+  hamburger.setAttribute('aria-expanded', isOpen);
+});
+
+navLinks.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    navLinks.classList.remove('open');
+    hamburger.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', 'false');
+  });
+});

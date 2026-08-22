@@ -3,7 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Portfolio</title>
+  <title>Adewusi Sodiq Adewale | Finance, Banking &amp; Technology Professional</title>
+  <meta name="description" content="Portfolio of Adewusi Sodiq Adewale, a finance, banking, and technology professional specializing in financial analysis, business development, and data-driven problem solving.">
+  <meta name="theme-color" content="#2c3e50">
+  <link rel="canonical" href="https://adewusiportfolio.netlify.app">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://adewusiportfolio.netlify.app">
+  <meta property="og:site_name" content="Adewusi Sodiq Adewale">
+  <meta property="og:title" content="Adewusi Sodiq Adewale | Finance, Banking &amp; Technology Professional">
+  <meta property="og:description" content="Finance, banking, and technology professional specializing in financial analysis, business development, and data-driven problem solving.">
+  <meta property="og:image" content="https://adewusiportfolio.netlify.app/images/profile.jpg">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Adewusi Sodiq Adewale | Finance, Banking &amp; Technology Professional">
+  <meta name="twitter:description" content="Finance, banking, and technology professional specializing in financial analysis, business development, and data-driven problem solving.">
+  <meta name="twitter:image" content="https://adewusiportfolio.netlify.app/images/profile.jpg">
+
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -11,17 +29,24 @@
 </head>
 <body>
 
+<a href="#main" class="skip-link">Skip to content</a>
+
  <nav>
   <div class="logo">AS</div>
-  <ul class="nav-links">
+  <ul class="nav-links" id="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#skills">Skills</a></li>
     <li><a href="#projects">Projects</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
+  <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
 </nav>
 
-<header class="hero">
+<header class="hero" id="main">
   <div class="hero-icon icon-1">📊</div>
   <div class="hero-icon icon-2">💼</div>
   <div class="hero-icon icon-3">💹</div>
@@ -39,7 +64,10 @@
 
 <section id="about" class="fade-in">
   <h2>About Me</h2>
-  <p>I am a results driven professional with experience across banking, financial analysis, business development, data analysis, and technology. I enjoy solving business problems, working with data, and using technology to create practical solutions.</p>
+  <div class="about-content">
+    <p>I am a results driven professional with experience across banking, financial analysis, business development, data analysis, and technology. I enjoy solving business problems, working with data, and using technology to create practical solutions.</p>
+    <img src="images/profile.jpg" alt="Adewusi Sodiq Adewale" class="about-photo" width="220" height="220">
+  </div>
 </section>
 
 <section id="skills" class="fade-in">
@@ -82,6 +110,11 @@
   <h2>Contact Me</h2>
   <div class="contact-card">
     <form id="contact-form">
+      <div class="hp-field" aria-hidden="true">
+        <label for="company">Company</label>
+        <input type="text" id="company" name="company" tabindex="-1" autocomplete="off">
+      </div>
+
       <div class="form-row">
         <div class="form-group">
           <label for="name">Name</label>

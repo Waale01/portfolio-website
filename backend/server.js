@@ -10,7 +10,11 @@ app.use(cors());
 app.use(express.json());
 
 app.post('/contact', async (req, res) => {
-  const { name, email, message } = req.body;
+  const { name, email, message, company } = req.body;
+
+  if (company) {
+    return res.status(200).json({ message: 'Message sent successfully!' });
+  }
 
   if (!name || !email || !message) {
     return res.status(400).json({ error: 'All fields are required.' });
